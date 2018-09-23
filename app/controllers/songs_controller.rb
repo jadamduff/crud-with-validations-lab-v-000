@@ -6,7 +6,8 @@ class SongsController < ApplicationController
   end
 
   def create
-
+    @song = Song.new
+    
   end
 
   def show
@@ -30,6 +31,10 @@ class SongsController < ApplicationController
   end
 
   private
+
+  def song_params
+    params.require(:title).permit(:author_name, :released, :release_year, :genre)
+  end
 
   def set_song!
     @song = Song.find(params[:id])

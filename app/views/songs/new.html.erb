@@ -1,7 +1,7 @@
 <%= form_for(@song) do |f| %>
 
   <%= f.label :title %>
-  <%= f.text_field :title, @song.title %>
+  <%= f.text_field :title, :value => @song.title %>
   <%= f.label :released %>
   <%= f.check_box :released, checked = @song.released %>
   <%= f.label :release_year %>

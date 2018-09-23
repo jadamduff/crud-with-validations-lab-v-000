@@ -16,7 +16,6 @@ class SongsController < ApplicationController
   end
 
   def show
-
   end
 
   def index
@@ -24,7 +23,6 @@ class SongsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update

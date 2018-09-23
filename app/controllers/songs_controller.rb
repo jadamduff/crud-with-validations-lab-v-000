@@ -1,8 +1,8 @@
-class SongsController < ActiveRecord::Base
+class SongsController < ApplicationController
   before_action :set_song!, only: [:show, :edit, :update]
 
   def new
-
+    @song = Song.new
   end
 
   def create
@@ -26,7 +26,7 @@ class SongsController < ActiveRecord::Base
   end
 
   def delete
-    
+
   end
 
   private

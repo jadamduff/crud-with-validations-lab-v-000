@@ -6,6 +6,7 @@ class SongsController < ApplicationController
   end
 
   def create
+    rails params
     @song = Song.new(song_params)
     if @song.valid?
       @song.save
